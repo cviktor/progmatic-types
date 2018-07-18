@@ -26,12 +26,36 @@ namespace Types
             //int y = 3;
             //Swap(ref x, ref y);
 
-            Person p = new Person();
-            p.Name = "Józsi";
-            Person p2 = new Person();
-            p2.Name = "Béla";
-            Swap(ref p, ref p2);
+            //Person p = new Person();
+            //p.Name = "Józsi";
+            //Person p2 = new Person();
+            //p2.Name = "Béla";
+            //Person p3 = p; //Mindig józsira mutat mert nem változtatjuk
+            //Swap(ref p, ref p2);
+            //Console.WriteLine(p.Name);
+
+            Person newPerson;
+            bool created = CreatePerson(out newPerson);
+
+            int number;
+
+            if (int.TryParse("0", out number))
+            {
+                Console.WriteLine("Sikerült számmá alakítani: " + number);
+            }
+            else
+            {
+                Console.WriteLine("Nem sikerült számmá alakítani: " + number);
+            }
+
             Console.ReadKey();
+        }
+
+        static bool CreatePerson(out Person p)
+        {
+            p = new Person(); //p-nek értéket kell adni return elõtt
+            p.Name = "Géza";
+            return true;
         }
 
         static void Swap(ref Person a, ref Person b)
