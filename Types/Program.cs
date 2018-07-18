@@ -17,11 +17,35 @@ namespace Types
             //Console.WriteLine(x);
 
             //Referencia típus példa
+            //Person p = new Person();
+            //p.Name = "Józsi";
+            //WritePerson(p);
+            //Console.WriteLine(p.Name);
+
+            //int x = 2;
+            //int y = 3;
+            //Swap(ref x, ref y);
+
             Person p = new Person();
             p.Name = "Józsi";
-            WritePerson(p);
-            Console.WriteLine(p.Name);
+            Person p2 = new Person();
+            p2.Name = "Béla";
+            Swap(ref p, ref p2);
             Console.ReadKey();
+        }
+
+        static void Swap(ref Person a, ref Person b)
+        {
+            Person c = a;
+            a = b;
+            b = c;
+        }
+
+        static void Swap(ref int a, ref int b)
+        {
+            int c = a;
+            a = b;
+            b = c;
         }
 
         static void WritePerson(Person x)
