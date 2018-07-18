@@ -53,19 +53,36 @@ namespace Types
             //Increase(d);
             //Console.WriteLine(d.cm);
 
-            Freezer f = new Freezer();
-            Person p = new Person();
-            p.Name = "Gazsi";
-            f.person = p;
-            f.x = 3;
-            ChangeName(f);
-            Console.WriteLine(f.x);
-            Console.WriteLine(f.person.Name);
-            Console.WriteLine(p.Name);
+            //Freezer f = new Freezer();
+            //Person p = new Person();
+            //p.Name = "Gazsi";
+            //f.person = p;
+            //f.x = 3;
+            //ChangeName(f);
+            //Console.WriteLine(f.x);
+            //Console.WriteLine(f.person.Name);
+            //Console.WriteLine(p.Name);
+
+
+            //var p = new Person();
+            //p.Name = "Józsi";
+            //Property initializer
+            var p = new Person()
+            {
+                Name = "Józsi"
+            };
+
+            WritePerson(new Person { Name = "Józsi" });
+
+            var list = new List<Person>() { p };
+            var x = 4;
+            //var line = Console.ReadLine();
+            string line = Console.ReadLine();
+
 
             Console.ReadKey();
         }
-
+        
         static void ChangeName(Freezer freezer)
         {
             freezer.person.Name = "Józsi";
