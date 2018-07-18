@@ -8,8 +8,9 @@ namespace Types
 {
     struct Distance
     {
-        int cm;
+        public int cm;
         string name;
+
 
         public Distance(int c)
         {

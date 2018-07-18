@@ -49,9 +49,15 @@ namespace Types
             //}
 
             Person p;
-            Distance d; //Érték típus ezért felvesz alapértelmezett értéket
-
+            Distance d = new Distance();
+            Increase(d);
+            Console.WriteLine(d.cm);
             Console.ReadKey();
+        }
+
+        static void Increase(Distance dist)
+        {
+            dist.cm = 100;
         }
 
         static bool CreatePerson(out Person p)
