@@ -34,19 +34,22 @@ namespace Types
             //Swap(ref p, ref p2);
             //Console.WriteLine(p.Name);
 
-            Person newPerson;
-            bool created = CreatePerson(out newPerson);
+            //Person newPerson;
+            //bool created = CreatePerson(out newPerson);
 
-            int number;
+            //int number;
 
-            if (int.TryParse("0", out number))
-            {
-                Console.WriteLine("Sikerült számmá alakítani: " + number);
-            }
-            else
-            {
-                Console.WriteLine("Nem sikerült számmá alakítani: " + number);
-            }
+            //if (int.TryParse("0", out number))
+            //{
+            //    Console.WriteLine("Sikerült számmá alakítani: " + number);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Nem sikerült számmá alakítani: " + number);
+            //}
+
+            Person p;
+            Distance d; //Érték típus ezért felvesz alapértelmezett értéket
 
             Console.ReadKey();
         }
