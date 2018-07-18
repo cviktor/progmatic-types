@@ -48,11 +48,28 @@ namespace Types
             //    Console.WriteLine("Nem sikerült számmá alakítani: " + number);
             //}
 
-            Person p;
-            Distance d = new Distance();
-            Increase(d);
-            Console.WriteLine(d.cm);
+            //Person p;
+            //Distance d = new Distance();
+            //Increase(d);
+            //Console.WriteLine(d.cm);
+
+            Freezer f = new Freezer();
+            Person p = new Person();
+            p.Name = "Gazsi";
+            f.person = p;
+            f.x = 3;
+            ChangeName(f);
+            Console.WriteLine(f.x);
+            Console.WriteLine(f.person.Name);
+            Console.WriteLine(p.Name);
+
             Console.ReadKey();
+        }
+
+        static void ChangeName(Freezer freezer)
+        {
+            freezer.person.Name = "Józsi";
+            freezer.x = 10;
         }
 
         static void Increase(Distance dist)
