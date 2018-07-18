@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Types
 {
+    public static class PersonExtension
+    {
+        //A paraméteren lévõ this kulcsszó miatt ez egy extension method lesz
+        public static void WritePerson(this Person p)
+        {
+            Console.WriteLine(p.Name);
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -72,7 +81,10 @@ namespace Types
                 Name = "Józsi"
             };
 
-            WritePerson(new Person { Name = "Józsi" });
+            //a kettõ ugyan azt eredményezi
+            PersonExtension.WritePerson(p);
+            p.WritePerson(); //Extension method hívás
+            //WritePerson(new Person { Name = "Józsi" });
 
             var list = new List<Person>() { p };
             var x = 4;
@@ -115,11 +127,10 @@ namespace Types
             b = c;
         }
 
-        static void WritePerson(Person x)
-        {
-            x.Name = "Béla";
-            Console.WriteLine(x.Name);
-        }
+        //static void WritePerson(Person x)
+        //{
+        //    Console.WriteLine(x.Name);
+        //}
 
         static void Write(int a)
         {
